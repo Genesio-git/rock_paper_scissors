@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getRandom(){
     return Math.random();
 }
@@ -42,7 +39,11 @@ function getHumanChoice(){
 
 console.log(getHumanChoice())
 
-function playRound(humanChoice, computerChoice){
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase()
 
     if(humanChoice == "pedra" && computerChoice == "papel"){
@@ -82,10 +83,10 @@ function playRound(humanChoice, computerChoice){
 
 }
 
+    playRound(getHumanChoice, getComputerChoice)
+
+}
+
 const humanSelection = getHumanChoice();
 
 const computerSelection = getComputerChoice();
-
-function playGame(){
-    
-}
